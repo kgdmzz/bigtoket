@@ -64,6 +64,7 @@ echo "[?] Referral Code : ";
 $referralCode = read();
 echo "[?] list          : ";
 $list = read();
+echo "\n";
 $file = file_get_contents($list);
 $data = explode("\n",$file);
 for($a=0;$a<count($data);$a++){
