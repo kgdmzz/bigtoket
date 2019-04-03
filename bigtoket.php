@@ -48,7 +48,7 @@
                 $headers[] = "Accept: application/json";
                 $headers[] = "User-Agent: Redmi ".rand(00000,999999)." Plus_".rand(00,99).".1.2_1.0.".rand(00,99);
                 $headers[] = "Host: api.bigtoken.com";
-                $register = curl("https://api.bigtoken.com/signup", 'email='.$email.'&password=AbcdefgH!&referral_id='.$referralCode.'&monetize=1', false, false, $headers);
+                $register = curl("https://api.bigtoken.com/signup", 'email='.$email.'&password=Abcdefg123!&referral_id='.$referralCode.'&monetize=1', false, false, $headers);
                 if(strpos($register, '"message": "Too Many Attempts."'))
                 {
                         return "\r\"message\": \"Too Many Attempts.\"";
