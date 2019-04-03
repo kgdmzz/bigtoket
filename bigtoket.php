@@ -1,9 +1,4 @@
 <?php
-/*
-copyright @ indonesiapedia.my.id
-Created by ./IkiGanteng
-2018
-*/
 
         function read ($length='255') 
         { 
@@ -56,12 +51,12 @@ Created by ./IkiGanteng
                 $register = curl("https://api.bigtoken.com/signup", 'email='.$email.'&password=AbcdefgH!&referral_id='.$referralCode.'&monetize=1', false, false, $headers);
                 if(strpos($register, '"message": "Too Many Attempts."'))
                 {
-                        print "\r\"message\": \"Too Many Attempts.\"";
+                        return "\r\"message\": \"Too Many Attempts.\"";
                         $this->register($referralCode);
                 }elseif(strpos($register, '"user_id":')){
-                        print PHP_EOL."Success Register... || ".$register.PHP_EOL. "|| ".$email.PHP_EOL;
+                        return PHP_EOL."Success Register || ".$register.PHP_EOL. " || ".$email.PHP_EOL;
                 }else{
-                        print PHP_EOL.$register.PHP_EOL;
+                        return PHP_EOL.$register.PHP_EOL;
                 }
         }
         
