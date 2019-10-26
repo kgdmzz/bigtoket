@@ -128,7 +128,7 @@ X-RateLimit-Reset:');
 $shn = $ss+1;
 					sleep($shn);
 					continue;
-}elseif (stripos($register_bt, 'The email has already been taken.')) {
+}elseif (stripos($register_bt, 'Emailnya udah kedaftar')) {
 		echo '['.$i.'/'.$jumlah.'] E-Mail Sudah Terdaftar';			    echo "\r\n"; continue;
 }elseif (stripos($register_bt, '204 No Content')) {
 
@@ -139,13 +139,13 @@ $shn = $ss+1;
 			$links = getStr($linkg,'Location: https://generator.email/inbox','
 Content');
 	if(!$links){
-		echo '['.$i.'/'.$jumlah.'] Gagal Dapat Link'; echo "\r\n"; continue;
+		echo '['.$i.'/'.$jumlah.'] Gagal Dapat Link bro'; echo "\r\n"; continue;
 	}					$getem = check($b,$ea,'https://generator.email/inbox'.$links.'');
 			$link = getStr($getem,'none" href="','"');
 	if(!$link){
 		echo '['.$i.'/'.$jumlah.'] E-Mail Tidak Ada Isi'; echo "\r\n"; continue;
 	}else{
-			echo '['.$i.'/'.$jumlah.'] Berhasil Dapat Link';
+			echo '['.$i.'/'.$jumlah.'] Berhasil Dapat Link bro';
 		    echo "\r\n";
 	$getver = get($link);
 $em = getStr($getver,'email=','
@@ -154,13 +154,13 @@ $cod = getStr($getver,'verify?code=','&typ');
 $d = '{"email":"'.$em.'","verification_code":"'.$cod.'"}';
 $ver = ver($d,$cod);
 if ($ver == '200') {
-		echo '['.$i.'/'.$jumlah.'] Sukses Verif '.$em.'';
+		echo '['.$i.'/'.$jumlah.'] Sukses Verif bro '.$em.'';
 		    echo "\r\n";
 	}elseif ($ver == '208') {
-				echo '['.$i.'/'.$jumlah.'] Sudah Verif '.$em.'';
+				echo '['.$i.'/'.$jumlah.'] Sudah Verif bro'.$em.'';
 		    echo "\r\n";
 	}elseif ($ver == '422') {
-				echo '['.$i.'/'.$jumlah.'] Salah Format '.$em.'';
+				echo '['.$i.'/'.$jumlah.'] Salah Format bro'.$em.'';
 		    echo "\r\n";
 	}elseif($ver == '429') {
 					echo '['.$i.'/'.$jumlah.'] Gagal Verif [Too Many Attempts.] Cek Manual di cdy.txt';
