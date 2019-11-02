@@ -27,7 +27,7 @@ curl_close ($ch);
 }
 function reg($e,$r){
 $ch = curl_init();
-$data = '{"password":"AsuuuuKon59$","monetize":true,"email":"'.$e.'","referral_id":"'.$r.'"}';
+$data = '{"password":"Bigtt123$","monetize":true,"email":"'.$e.'","referral_id":"'.$r.'"}';
 curl_setopt($ch, CURLOPT_URL, 'https://api.bigtoken.com/signup');
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
     curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
@@ -104,9 +104,9 @@ function getStr($content,$start,$end){
 }
 echo 'Kang Recode - 2k19';		    echo "\r\n"; echo "================";echo "\r\n";
 //echo 'Kode Referral ? : ';
-$ref = NGENTOD;
+$ref = MBAHTEKNO;
 //echo 'Mau Berapa ? : ';
-$jumlah = 987654321;
+$jumlah = 999999;
 $i=1;
 while($i <= $jumlah){
 			echo "================";echo "\r\n";
